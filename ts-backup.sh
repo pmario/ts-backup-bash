@@ -5,7 +5,7 @@ set -e # exit with nonzero exit code if anything fails
 # has too many dependencies
 
 # author: Mario Pietsch
-# Version: 0.0.2
+# Version: 0.1.0
 # License: CC-BY-NC-SA
 
 # Usage:
