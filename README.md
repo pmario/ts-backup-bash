@@ -31,4 +31,6 @@ see: https://youtu.be/bBSF1mFQswA
 
 ## Donate
 
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](paypal.me/PMarioJo) If this script helped you, to save your valuable time, you can help me spend more time creating useful things. Thanks!
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/PMarioJo)
+
+If this script helped you, to save your valuable time, you can help me spend more time creating useful things. Thanks!
