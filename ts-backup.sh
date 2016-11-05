@@ -2,6 +2,11 @@
 set -e # exit with nonzero exit code if anything fails
 
 # initial scrip from: http://sandbox.tiddlyspace.com/_/b6909b19-ecfb-4b31-a782-48d22d6abf5f
+# has too many dependencies
+
+# author: Mario Pietsch
+# Version: 0.0.2
+# License: CC-BY-NC-SA
 
 # Usage:
 #   $ ./tiddlyspace_backup my-username
