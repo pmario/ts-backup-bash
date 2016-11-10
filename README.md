@@ -11,6 +11,8 @@ Prerequisites:
 
 Executable:
 
+The ts-backup file needs to be an executable!
+
 ```
 chmod +x ts-backup.sh
 ```

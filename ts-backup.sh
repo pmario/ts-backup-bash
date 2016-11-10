@@ -5,7 +5,7 @@ set -e # exit with nonzero exit code if anything fails
 # has too many dependencies
 
 # author: Mario Pietsch
-# Version: 0.1.0
+# Version: 0.2.0
 # License: CC-BY-NC-SA
 
 # Usage:
@@ -26,7 +26,7 @@ echo "Important:
 	Use [Ctrl]-C to stop the script at any time!"
 
 
-printf "\nenter password:"
+printf "\nEnter the TiddlySpace password:"
 read -s password
 
 # mingw doesn't know jq command, so use sed instead extract the names
@@ -36,16 +36,24 @@ spaces=`curl -u "$username:$password" "http://$username.tiddlyspace.com/spaces?m
 
 cd `dirname $0`
 
-# create data dir, if it doesn't exist
+# some variable definitions
 output="${username}/data"
-mkdir -p ${output}
-
+logfile="spaces-${username}.log"
 
 printf "\n---> Those Spaces are prepared to be downloaded:\n"
 
 for space in $spaces; do
-	echo "  $space, "
+	echo "http://${space}.tiddlyspace.com"
 done
+
+# create a log file, that can be used to move the stuff to the internet archive.org
+# see: https://archive.org/web/  ... Save Page Now input area!!
+rm -f "${logfile}" # 2> /dev/null
+
+for space in $spaces; do
+	echo "http://${space}.tiddlyspace.com" >> $logfile
+done
+# --- end log
 
 printf "\nThe download process may need several minutes.\n"
 
@@ -62,6 +70,8 @@ case $confirm in
         ;;
 esac
 
+# create data dir, if it doesn't exist
+mkdir -p ${output}
 
 # test empty space
 #for space in dboxgallery; do
