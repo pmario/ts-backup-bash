@@ -1,6 +1,6 @@
 # ts-backup-bash
 
-After downloading the script, make sure it is executable.
+After [downloading](https://github.com/pmario/ts-backup-bash/releases/) the script, make sure it is executable.
 
 Prerequisites:
 

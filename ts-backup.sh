@@ -5,7 +5,7 @@ set -e # exit with nonzero exit code if anything fails
 # has too many dependencies
 
 # author: Mario Pietsch
-# Version: 0.2.0
+# Version: 0.2.1
 # License: CC-BY-NC-SA
 
 # Usage:
@@ -43,7 +43,7 @@ logfile="spaces-${username}.log"
 printf "\n---> Those Spaces are prepared to be downloaded:\n"
 
 for space in $spaces; do
-	echo "http://${space}.tiddlyspace.com"
+	echo "  ${space}"
 done
 
 # create a log file, that can be used to move the stuff to the internet archive.org
