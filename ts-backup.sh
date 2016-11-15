@@ -122,6 +122,8 @@ fi
 if [[ $createMySpaces == 0 && $useInputFile == 0 ]]; then
 	#printf "\nget spaces\n"
 	spaces=`curl -u "$username:$password" "http://$username.tiddlyspace.com/spaces?mine=1" | sed 's;"name": ";\'$'\n;g' | sed 's;".*;;g' | sed 's;\[{;;g'`
+
+	echo "$spaces" > ${FILE_MY_SPACES}
 elif [[ $useInputFile == 1 ]]; then
 	spaces=$(<$FILE_MY_SPACES)
 	BAG_TYPES="public"
